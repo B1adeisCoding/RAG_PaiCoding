@@ -52,8 +52,8 @@ services:
     command: redis-server --bind 0.0.0.0 --port 6379 --requirepass PaiSmart2025 --appendonly yes
 
   kafka:
-    image: bitnami/kafka:latest
-    container_name: kafka
+    image: bitnamilegacy/kafka:latest
+    container_name: kafka       # 如果需要按照新的命名规则，请改为 pai_smart_kafka
     restart: always
     ports:
       - "9092:9092"
